@@ -1,0 +1,108 @@
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1464621577" format="1.1"  version="1"}%
+---+!! %TOPIC%
+%$SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Description
+
+%TOPIC% is a thin wrapper to bring [[http://photoswipe.com/][PhotoSwipe]] to Foswiki. It adds the minimum amount of glue
+to render an image gallery using this frontend. <nop>%TOPIC% is meant to be used together with [[Foswiki:Extensions/ImagePlugin][ImagePlugin]] or
+[[Foswiki:Extensions/ImageGalleryPlugin][ImageGalleryPlugin]] to render thumbnails on the backend while !PhotoSwipe is used on the frontend.
+
+The easiest way is to wrap a couple of =%IMAGE= tags with a =div= element using the =jqPhotoSwipe= css class.
+
+<verbatim class="tml">
+%JQREQUIRE{"photoswipe"}%
+
+<div class="jqPhotoSwipe">
+%IMAGE{"image1.png" size="200"}%
+%IMAGE{"image2.png" size="200"}%
+%IMAGE{"image3.png" size="200"}%
+%IMAGE{"image4.png" size="200"}%
+</div>
+</verbatim>
+
+As with other =JQ...Contrib= extensions the macro =%<nop>JQREQUIRE{"photoswipe"}%= will load the required javascript assets into the page
+including an initializer to process any thumbnails wrapped by a =jqPhotoSwipe= element.
+
+Note that !ImageGalleryPlugin detects %TOPIC% being installed automatically and will then switch to this frontend (starting with version 7.10).
+
+---++ Examples
+
+You type:
+
+<verbatim class="tml">
+%IMAGEGALLERY%
+</verbatim>
+
+You get (if installed):
+
+%IF{"context ImageGalleryPluginEnabled" 
+   then="$percntIMAGEGALLERY$percnt" 
+   else="<span class='foswikiAlert'><nop>ImageGalleryPlugin not installed</span>"
+}%
+
+You type:
+
+<verbatim class="tml">
+%JQREQUIRE{"photoswipe"}%
+<div class="jqPhotoSwipe">
+%IMAGE{"15008867125_b61960af01_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"15008518202_c265dfa55f_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"15008465772_d50c8f0531_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"14985871946_24f47d4b53_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"14985868676_b51baa4071_h.jpg" size="95x95" crop="on"}%
+</div>
+</verbatim>
+
+You get (if installed):
+
+%JQREQUIRE{"photoswipe"}%
+<div class="jqPhotoSwipe">
+%IMAGE{"15008867125_b61960af01_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"15008518202_c265dfa55f_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"15008465772_d50c8f0531_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"14985871946_24f47d4b53_h.jpg" size="95x95" crop="on"}%
+%IMAGE{"14985868676_b51baa4071_h.jpg" size="95x95" crop="on"}%
+</div>
+
+---++ Options
+
+Additional parameter to photoswipe might be specified using HTML5 data attributesm, such as in below example:
+
+<verbatim class="tml">
+<div class="jqPhotoSwipe" data-allow-pan-to-next="false">
+...
+</div>
+</verbatim>
+
+See the [[http://photoswipe.com/documentation/options.html][full documentation]] of all options.
+
+---++ Installation Instructions
+
+%$INSTALL_INSTRUCTIONS%
+
+---++ Dependencies
+%$DEPENDENCIES%
+
+---++ Change History
+
+%TABLE{columnwidths="7em" tablewidth="100%"}%
+| 30 May 2016 | initial release |
+
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Michael Daum"}%
+%META:FIELD{name="Version" title="Version" value="%25$VERSION%25"}%
+%META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
+%META:FIELD{name="Description" title="Description" value=""}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25$ROOTMODULE%25"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2016, Michael Daum http://michaeldaumconsulting.com"}%
+%META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
+%META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
+%META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%
+%META:FILEATTACHMENT{name="15008465772_d50c8f0531_h.jpg" attachment="15008465772_d50c8f0531_h.jpg" attr="" comment="Photo: Thomas Lefebvre" date="1464621577" size="394005" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="14985868676_b51baa4071_h.jpg" attachment="14985868676_b51baa4071_h.jpg" attr="" comment="Photo: Michael Hull" date="1464621577" size="338118" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="14985871946_24f47d4b53_h.jpg" attachment="14985871946_24f47d4b53_h.jpg" attr="" comment="Photo: Ales Krivec" date="1464621577" size="397457" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="15008867125_b61960af01_h.jpg" attachment="15008867125_b61960af01_h.jpg" attr="" comment="Photo: Samuel Rohl" date="1464621577" size="607539" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="15008518202_c265dfa55f_h.jpg" attachment="15008518202_c265dfa55f_h.jpg" attr="" comment="Photo: Folkert Gorter" date="1464621577" size="696089" user="ProjectContributor" version="1"}%

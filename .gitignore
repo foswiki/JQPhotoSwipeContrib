@@ -1,0 +1,15 @@
+*,v
+*.swp
+igp_*
+*.gz
+*.jslint
+/JQPhotoSwipeContrib.md5
+/JQPhotoSwipeContrib.sha1
+/JQPhotoSwipeContrib.tgz
+/JQPhotoSwipeContrib.txt
+/JQPhotoSwipeContrib.zip
+/JQPhotoSwipeContrib_installer
+/JQPhotoSwipeContrib_installer.pl
+pub/System/JQPhotoSwipeContrib/git/
+pub/System/JQPhotoSwipeContrib/photoswipe-ui-default.js
+pub/System/JQPhotoSwipeContrib/pkg.*

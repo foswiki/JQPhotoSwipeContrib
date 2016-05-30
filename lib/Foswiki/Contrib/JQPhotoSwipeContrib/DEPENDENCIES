@@ -1,0 +1,2 @@
+Foswiki::Plugins::ImageGalleryPlugin,>=7.10,perl,Optional
+Foswiki::Plugins::ImagePlugin,>=7.20,perl,Optional
