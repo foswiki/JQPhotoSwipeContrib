@@ -3,7 +3,7 @@
 (function($, window) {
 
   var defaults = {
-    itemSelector: ".imageSimple, .imageHref",
+    itemSelector: ".imageHref",
     pswpSelector: ".pswp",
     tapToClose: false,
     closeOnScroll: false,
@@ -11,7 +11,8 @@
     loop: false,
     spacing: 0,
     index: 0,
-    defaultWidth: 800
+    defaultWidth: 800,
+    history: true
   },
   galleryCounter = 1;
 
@@ -41,7 +42,26 @@
   } 
 
   Plugin.prototype.init = function () { 
-    var self = this, index = 0, hash;
+    var self = this, hash;
+
+    self.initItems();
+
+    // process location hash
+    if (self.opts.history) {
+      hash = window.location.hash.match(/&gid=(\d+)&pid=(\d+)/);
+      if (hash && hash.length === 3 && hash[1] == self.opts.galleryUID) {
+        self.items[hash[2]-1].frame.trigger("click");
+      }
+    }
+
+    // listen to an update event and harvest image items again
+    self.$elem.on("update", function(e) {
+      self.initItems();
+    });
+  }; 
+
+  Plugin.prototype.initItems = function() {
+    var self = this, index = 0;
 
     self.items = [];
 
@@ -85,12 +105,8 @@
       index++;
     });
 
-    // process location hash
-    hash = window.location.hash.match(/&gid=(\d+)&pid=(\d+)/);
-    if (hash && hash.length === 3 && hash[1] == self.opts.galleryUID) {
-      self.items[hash[2]-1].frame.trigger("click");
-    }
-  }; 
+    //console.log("found "+index+" items in photoswipe");
+  };
 
   // get the pswpElem as late as possible in case it has been injected async'ly
   Plugin.prototype.getPswpElem = function() {

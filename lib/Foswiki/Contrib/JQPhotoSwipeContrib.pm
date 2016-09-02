@@ -20,8 +20,8 @@ use warnings;
 
 use Foswiki::Func ();
 
-our $VERSION = '1.00';
-our $RELEASE = '25 May 2016';
+our $VERSION = '1.01';
+our $RELEASE = '02 Sep 2016';
 our $SHORTDESCRIPTION = 'Modern javascript image gallery';
 our $NO_PREFS_IN_TOPIC = 1;
 
