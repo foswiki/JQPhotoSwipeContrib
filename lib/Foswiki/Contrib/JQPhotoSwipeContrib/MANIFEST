@@ -1,3 +1,4 @@
+!noci
 data/System/JQPhotoSwipeContrib.txt 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib/Config.spec 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib/Core.pm 0644

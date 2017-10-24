@@ -89,6 +89,7 @@ See the [[http://photoswipe.com/documentation/options.html][full documentation]]
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+| 24 Oct 2017 | cleaned up photoswipe template from unnecessary html comments |
 | 02 Sep 2016 | fixed Config.spec typo; fixed javascript initializer; better usability navigating images in gallery |
 | 30 May 2016 | initial release |
 
@@ -98,7 +99,7 @@ See the [[http://photoswipe.com/documentation/options.html][full documentation]]
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value=""}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25$ROOTMODULE%25"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2016, Michael Daum http://michaeldaumconsulting.com"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2016-2017, Michael Daum http://michaeldaumconsulting.com"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
 %META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%
