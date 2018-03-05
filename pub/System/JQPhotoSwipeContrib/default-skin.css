@@ -35,14 +35,11 @@
           transition: opacity 0.2s;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .pswp__button:focus,
-  .pswp__button:hover {
+  .pswp__button:focus, .pswp__button:hover {
     opacity: 1; }
   .pswp__button:active {
-    background:inherit;
     outline: none;
-    opacity: 0.9; 
-}
+    opacity: 0.9; }
   .pswp__button::-moz-focus-inner {
     padding: 0;
     border: 0; }
@@ -106,9 +103,10 @@
 .pswp__button--arrow--left,
 .pswp__button--arrow--right {
   background: none;
-  top: 50px;
-  width: 20%;
-  height: 100%;
+  top: 50%;
+  margin-top: -50px;
+  width: 70px;
+  height: 100px;
   position: absolute; }
 
 .pswp__button--arrow--left {
@@ -120,9 +118,8 @@
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
   content: '';
-  top: 50%;
+  top: 35px;
   background-color: rgba(0, 0, 0, 0.3);
-  margin-top:-15px;
   height: 30px;
   width: 32px;
   position: absolute; }

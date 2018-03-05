@@ -89,6 +89,7 @@ See the [[http://photoswipe.com/documentation/options.html][full documentation]]
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+| 05 Mar 2018 | updated to latest photoswipe version |
 | 24 Oct 2017 | cleaned up photoswipe template from unnecessary html comments |
 | 02 Sep 2016 | fixed Config.spec typo; fixed javascript initializer; better usability navigating images in gallery |
 | 30 May 2016 | initial release |

@@ -1,6 +1,6 @@
 FOSWIKI_ROOT?=~/foswiki/core
 TARGET=pkg.css pkg.js default-skin.png default-skin.svg preloader.gif
-PKG_JS_SOURCE=photoswipe.uncompressed.js photoswipe-ui-default.js photoswipe.init.uncompressed.js
+PKG_JS_SOURCE=photoswipe.uncompressed.js photoswipe-ui-default.uncompressed.js photoswipe.init.uncompressed.js
 PKG_CSS_SOURCE=photoswipe.uncompressed.css default-skin.css
 
 -include $(FOSWIKI_ROOT)/pub/System/JQueryPlugin/Makefile.include

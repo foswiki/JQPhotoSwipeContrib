@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQPhotoSwipeContrib is Copyright (C) 2016-2017 Michael Daum http://michaeldaumconsulting.com
+# JQPhotoSwipeContrib is Copyright (C) 2016-2018 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -36,7 +36,7 @@ sub new {
   my $this = bless(
     $class->SUPER::new(
       name => 'PhotoSwipe',
-      version => '4.1.1',
+      version => '4.1.2',
       author => 'Dmitry Semenov',
       homepage => 'http://photoswipe.com',
       css => ['pkg.css'],
