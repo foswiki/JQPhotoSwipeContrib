@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQPhotoSwipeContrib is Copyright (C) 2016-2018 Michael Daum http://michaeldaumconsulting.com
+# JQPhotoSwipeContrib is Copyright (C) 2016-2019 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -42,7 +42,6 @@ sub new {
       css => ['pkg.css'],
       javascript => ['pkg.js'],
       puburl => '%PUBURLPATH%/%SYSTEMWEB%/JQPhotoSwipeContrib',
-      dependencies => ['livequery'],
     ),
     $class
   );

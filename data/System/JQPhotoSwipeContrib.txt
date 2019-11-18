@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1464621577" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1574083013" format="1.1"  version="1"}%
 ---+!! %TOPIC%
 %$SHORTDESCRIPTION%
 
@@ -89,6 +89,7 @@ See the [[http://photoswipe.com/documentation/options.html][full documentation]]
 ---++ Change History
 
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+| 18 Nov 2019 | allow "swiping" of a single element |
 | 05 Mar 2018 | updated to latest photoswipe version |
 | 24 Oct 2017 | cleaned up photoswipe template from unnecessary html comments |
 | 02 Sep 2016 | fixed Config.spec typo; fixed javascript initializer; better usability navigating images in gallery |
@@ -100,12 +101,12 @@ See the [[http://photoswipe.com/documentation/options.html][full documentation]]
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value=""}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25$ROOTMODULE%25"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2016-2017, Michael Daum http://michaeldaumconsulting.com"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2016-2019, Michael Daum http://michaeldaumconsulting.com"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="http://foswiki.org/Extensions/%25$ROOTMODULE%25"}%
 %META:FIELD{name="Support" title="Support" value="http://foswiki.org/Support/%25$ROOTMODULE%25"}%
-%META:FILEATTACHMENT{name="15008465772_d50c8f0531_h.jpg" attachment="15008465772_d50c8f0531_h.jpg" attr="" comment="Photo: Thomas Lefebvre" date="1464621577" size="394005" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="14985868676_b51baa4071_h.jpg" attachment="14985868676_b51baa4071_h.jpg" attr="" comment="Photo: Michael Hull" date="1464621577" size="338118" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="14985871946_24f47d4b53_h.jpg" attachment="14985871946_24f47d4b53_h.jpg" attr="" comment="Photo: Ales Krivec" date="1464621577" size="397457" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="15008867125_b61960af01_h.jpg" attachment="15008867125_b61960af01_h.jpg" attr="" comment="Photo: Samuel Rohl" date="1464621577" size="607539" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="15008518202_c265dfa55f_h.jpg" attachment="15008518202_c265dfa55f_h.jpg" attr="" comment="Photo: Folkert Gorter" date="1464621577" size="696089" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="15008465772_d50c8f0531_h.jpg" attachment="15008465772_d50c8f0531_h.jpg" attr="" comment="Photo: Thomas Lefebvre" date="1574083013" size="394005" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="14985868676_b51baa4071_h.jpg" attachment="14985868676_b51baa4071_h.jpg" attr="" comment="Photo: Michael Hull" date="1574083013" size="338118" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="14985871946_24f47d4b53_h.jpg" attachment="14985871946_24f47d4b53_h.jpg" attr="" comment="Photo: Ales Krivec" date="1574083013" size="397457" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="15008867125_b61960af01_h.jpg" attachment="15008867125_b61960af01_h.jpg" attr="" comment="Photo: Samuel Rohl" date="1574083013" size="607539" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="15008518202_c265dfa55f_h.jpg" attachment="15008518202_c265dfa55f_h.jpg" attr="" comment="Photo: Folkert Gorter" date="1574083013" size="696089" user="ProjectContributor" version="1"}%

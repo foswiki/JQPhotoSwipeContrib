@@ -20,9 +20,9 @@
   function Plugin(elem, opts) { 
     var self = this;
 
-    self.$elem = $(elem); 
-
-    self.opts = $.extend({}, defaults, opts, self.$elem.metadata(), self.$elem.data()); 
+    self.elem = $(elem); 
+    self.items = [];
+    self.opts = $.extend({}, defaults, opts, self.elem.metadata(), self.elem.data()); 
     
     self.opts.getThumbBoundsFn = self.opts.getThumbBoundsFn || function(index) {
       var item = self.items[index],
@@ -55,57 +55,64 @@
     }
 
     // listen to an update event and harvest image items again
-    self.$elem.on("update", function(e) {
+    self.elem.on("update", function(e) {
       self.initItems();
     });
   }; 
+
+  Plugin.prototype.addItem = function(elem) {
+    var self = this;
+        index = self.items.length,
+        $elem = $(elem), 
+        $thumb = $elem.find("img"),
+        thumbWidth = $thumb.width(),
+        thumbHeight = $thumb.height(),
+        origWidth = $elem.metadata().origWidth || $elem.data("origWidth") || self.opts.defaultWidth,
+        origHeight = $elem.metadata().origHeight || $elem.data("origHeight") || origWidth * thumbHeight / thumbWidth;
+
+    self.items.push({
+      index: index,
+      w: origWidth,
+      h: origHeight,
+      frame: $elem,
+      src: $elem.data("origUrl") || $elem.attr("href"),
+      thumb: $thumb,
+      thumbWidth: thumbWidth,
+      thumbHeight: thumbHeight,
+      msrc: $thumb.attr("src"),
+      title: $elem.attr("title")
+    });
+
+    $elem.data("index", index);
+
+    $elem.on("click", function(ev) {
+      var index = $(this).data("index"),
+          opts = $.extend({}, self.opts, {
+            index: index
+          });
+
+      ev.preventDefault();
+
+      self.pswp = new PhotoSwipe(self.getPswpElem(), PhotoSwipeUI_Default, self.items, opts);
+      self.pswp.init();
+
+      return false;
+    });
+  };
 
   Plugin.prototype.initItems = function() {
     var self = this, index = 0;
 
     self.items = [];
 
-    self.$elem.find(self.opts.itemSelector).each(function() {
-      var $this = $(this), 
-          $thumb = $this.find("img"),
-          thumbWidth = $thumb.width(),
-          thumbHeight = $thumb.height(),
-          origWidth = $this.metadata().origWidth || $this.data("origWidth") || self.opts.defaultWidth,
-          origHeight = $this.metadata().origHeight || $this.data("origHeight") || origWidth * thumbHeight / thumbWidth;
-
-      self.items.push({
-        index: index,
-        w: origWidth,
-        h: origHeight,
-        frame: $this,
-        src: $this.data("origUrl") || $this.attr("href"),
-        thumb: $thumb,
-        thumbWidth: thumbWidth,
-        thumbHeight: thumbHeight,
-        msrc: $thumb.attr("src"),
-        title: $this.attr("title")
-      });
-
-      $this.data("index", index);
-
-      $this.on("click", function(ev) {
-        var index = $this.data("index"),
-            opts = $.extend({}, self.opts, {
-              index: index
-            });
-
-        ev.preventDefault();
-
-        self.pswp = new PhotoSwipe(self.getPswpElem(), PhotoSwipeUI_Default, self.items, opts);
-        self.pswp.init();
-
-        return false;
-      });
-
-      index++;
+    if (self.elem.is(self.opts.itemSelector)) {
+      self.addItem(self.elem);
+    }
+    self.elem.find(self.opts.itemSelector).each(function() {
+      self.addItem(this);
     });
 
-    //console.log("found "+index+" items in photoswipe");
+    //console.log("found "+self.items.length+" items in photoswipe");
   };
 
   // get the pswpElem as late as possible in case it has been injected async'ly
