@@ -1,7 +1,7 @@
 # ---+ Extensions
 # ---++ JQueryPlugin
 # ---+++ Extra plugins
-# **STRING**
+# **STRING EXPERT**
 $Foswiki::cfg{JQueryPlugin}{Plugins}{PhotoSwipe}{Module} = 'Foswiki::Contrib::JQPhotoSwipeContrib::Core';
 
 # **BOOLEAN**

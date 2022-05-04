@@ -47,5 +47,6 @@ clean:
 	      default-skin.* \
 	      pkg.uncompressed.css \
 	      pkg.uncompressed.js \
+	      igp_* \
 	      $(TARGET) *.gz
 

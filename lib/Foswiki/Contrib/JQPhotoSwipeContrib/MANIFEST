@@ -12,9 +12,9 @@ pub/System/JQPhotoSwipeContrib/15008867125_b61960af01_h.jpg 0644
 pub/System/JQPhotoSwipeContrib/default-skin.css 0644
 pub/System/JQPhotoSwipeContrib/default-skin.png 0644
 pub/System/JQPhotoSwipeContrib/default-skin.svg 0644
+pub/System/JQPhotoSwipeContrib/default-skin.svg.gz 0644
 pub/System/JQPhotoSwipeContrib/Makefile 0644
 pub/System/JQPhotoSwipeContrib/photoswipe.init.uncompressed.js 0644
-pub/System/JQPhotoSwipeContrib/photoswipe-ui-default.js 0644
 pub/System/JQPhotoSwipeContrib/photoswipe-ui-default.uncompressed.js 0644
 pub/System/JQPhotoSwipeContrib/photoswipe.uncompressed.css 0644
 pub/System/JQPhotoSwipeContrib/photoswipe.uncompressed.js 0644
@@ -25,4 +25,3 @@ pub/System/JQPhotoSwipeContrib/pkg.js.gz 0644
 pub/System/JQPhotoSwipeContrib/pkg.uncompressed.css 0644
 pub/System/JQPhotoSwipeContrib/pkg.uncompressed.js 0644
 pub/System/JQPhotoSwipeContrib/preloader.gif 0644
-templates/photoswipe.tmpl 0644

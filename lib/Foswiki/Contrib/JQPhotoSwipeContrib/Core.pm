@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQPhotoSwipeContrib is Copyright (C) 2016-2019 Michael Daum http://michaeldaumconsulting.com
+# JQPhotoSwipeContrib is Copyright (C) 2016-2022 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -36,7 +36,7 @@ sub new {
   my $this = bless(
     $class->SUPER::new(
       name => 'PhotoSwipe',
-      version => '4.1.2',
+      version => '4.1.3',
       author => 'Dmitry Semenov',
       homepage => 'http://photoswipe.com',
       css => ['pkg.css'],
@@ -48,20 +48,6 @@ sub new {
 
   $this->{_doneReadTemplate} = 0;
   return $this;
-}
-
-sub init {
-    my $this = shift;
-
-    return unless $this->SUPER::init();
-
-    unless ($this->{_doneReadTemplate}) {
-      $this->{_doneReadTemplate} = 1;
-      Foswiki::Func::readTemplate("photoswipe");
-    }
-    my $tmpl = Foswiki::Func::expandTemplate("pswp");
-
-    Foswiki::Func::addToZone("body", "JQUERYPLUGIN::JQPHOTOSWIPECONTRIB::PSWP", $tmpl);
 }
 
 1;
