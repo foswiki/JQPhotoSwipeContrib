@@ -1,3 +1,12 @@
+/*
+ * PhotoSwipe Wrapper: inits the photo swipe delegate 
+ *
+ * Copyright (c) 2016-2024 Michael Daum http://michaeldaumconsulting.com
+ *
+ * Licensed under the GPL license http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
 /*global PhotoSwipe, PhotoSwipeUI_Default */
 
 "use strict";
@@ -19,7 +28,7 @@
   doneTemplate = false;
 
   // The actual plugin constructor 
-  function Plugin(elem, opts) { 
+  function PhotoSwipeWrapper(elem, opts) { 
     var self = this;
 
     self.elem = $(elem); 
@@ -43,7 +52,7 @@
     self.init(); 
   } 
 
-  Plugin.prototype.init = function () { 
+  PhotoSwipeWrapper.prototype.init = function () { 
     var self = this, hash;
 
     self.loadTemplate();
@@ -63,7 +72,7 @@
     });
   }; 
 
-  Plugin.prototype.loadTemplate = function() {
+  PhotoSwipeWrapper.prototype.loadTemplate = function() {
     var self = this;
 
     if (doneTemplate) {
@@ -85,7 +94,6 @@
             <div class="pswp__top-bar">
                 <div class="pswp__counter"></div>
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
                 <div class="pswp__preloader">
@@ -95,9 +103,6 @@
                       </div>
                     </div>
                 </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
             </div>
             <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
             </button>
@@ -111,7 +116,7 @@
 </div>`);
   };
 
-  Plugin.prototype.addItem = function(elem) {
+  PhotoSwipeWrapper.prototype.addItem = function(elem) {
     var self = this;
         index = self.items.length,
         $elem = $(elem), 
@@ -151,7 +156,7 @@
     });
   };
 
-  Plugin.prototype.initItems = function() {
+  PhotoSwipeWrapper.prototype.initItems = function() {
     var self = this, index = 0;
 
     self.items = [];
@@ -167,7 +172,7 @@
   };
 
   // get the pswpElem as late as possible in case it has been injected async'ly
-  Plugin.prototype.getPswpElem = function() {
+  PhotoSwipeWrapper.prototype.getPswpElem = function() {
     var self = this;
 
     if (typeof(self.pswpElem) === 'undefined' || self.pswpElem.length === 0) {
@@ -182,7 +187,7 @@
   $.fn.photoSwipe = function (opts) { 
     return this.each(function () { 
       if (!$.data(this, "photoSwipe")) { 
-        $.data(this, "photoSwipe", new Plugin(this, opts)); 
+        $.data(this, "photoSwipe", new PhotoSwipeWrapper(this, opts)); 
       } 
     }); 
   };

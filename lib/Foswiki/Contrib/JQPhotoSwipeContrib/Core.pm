@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQPhotoSwipeContrib is Copyright (C) 2016-2022 Michael Daum http://michaeldaumconsulting.com
+# JQPhotoSwipeContrib is Copyright (C) 2016-2024 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -22,14 +22,6 @@ use Foswiki::Func ();
 use Foswiki::Plugins::JQueryPlugin::Plugin ();
 our @ISA = qw( Foswiki::Plugins::JQueryPlugin::Plugin );
 
-use constant TRACE => 0; # toggle me
-
-sub writeDebug {
-  return unless TRACE;
-  #Foswiki::Func::writeDebug("JQPhotoSwipeContrib::Core - $_[0]");
-  print STDERR "JQPhotoSwipeContrib::Core - $_[0]\n";
-}
-
 sub new {
   my $class = shift;
 
@@ -46,7 +38,6 @@ sub new {
     $class
   );
 
-  $this->{_doneReadTemplate} = 0;
   return $this;
 }
 
