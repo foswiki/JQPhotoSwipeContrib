@@ -3,6 +3,7 @@ data/System/JQPhotoSwipeContrib.txt 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib/Config.spec 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib/Core.pm 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib/DEPENDENCIES 0644
+lib/Foswiki/Contrib/JQPhotoSwipeContrib/MANIFEST 0644
 lib/Foswiki/Contrib/JQPhotoSwipeContrib.pm 0644
 pub/System/JQPhotoSwipeContrib/14985868676_b51baa4071_h.jpg 0644
 pub/System/JQPhotoSwipeContrib/14985871946_24f47d4b53_h.jpg 0644

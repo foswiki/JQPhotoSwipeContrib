@@ -1,6 +1,6 @@
 # Extension for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# JQPhotoSwipeContrib is Copyright (C) 2016-2024 Michael Daum http://michaeldaumconsulting.com
+# JQPhotoSwipeContrib is Copyright (C) 2016-2025 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@ package Foswiki::Contrib::JQPhotoSwipeContrib;
 use strict;
 use warnings;
 
-our $VERSION = '2.01';
+our $VERSION = '2.02';
 our $RELEASE = '%$RELEASE%';
 our $SHORTDESCRIPTION = 'Modern javascript image gallery';
 our $LICENSECODE = '%$LICENSECODE%';
